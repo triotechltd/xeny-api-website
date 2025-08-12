@@ -3,7 +3,7 @@ version: "3.7"
 services:
   apache-php:
     build: .
-    container_name: justtawk-ae-website
+    container_name: xeny-website
     ports:
       - "20222:80"
     volumes:
