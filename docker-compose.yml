@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  apache-php:
+    build: .
+    container_name: justtawk-ae-website
+    ports:
+      - "20222:80"
+    volumes:
+      - ./:/var/www/html
+      - ./default.conf:/etc/apache2/sites-available/000-default.conf
+    restart: always
+    networks:
+      - triotech-network
+
+networks:
+  triotech-network:
+    external: true
